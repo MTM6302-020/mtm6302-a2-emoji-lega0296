@@ -9,7 +9,6 @@ const emojiCodes = [
 const container = document.getElementById("container");
 const emojiCards = document.getElementById("emoji-cards");
 
-emojiCards.tabIndex = 0;
 emojiCards.textContent = "Emoji gallery";
 
 // DEFINE showEmojis(count)
@@ -34,8 +33,11 @@ const clearGallery = () => {
 };
 
 //  REPEAT count times, starting at array index zero
+emojiCards.tabIndex = 0;
 
 // READ the emoji code at the current index
+
+showEmojis(emojiCodes.length);
 // CREATE a card containing the emoji and its code
 // ADD the card to the gallery
 
