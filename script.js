@@ -6,9 +6,12 @@ const emojiCodes = [
 const container = document.getElementById("container");
 const emojiCards = document.getElementById("emoji-cards");
 
-emojiCodes.forEach((code) => {
-  const emoji = String.fromCodePoint(code);
-  const emojiCard = document.createElement("div");
-  emojiCard.textContent = emoji;
-  emojiCards.appendChild(emojiCard);
-});
+function showEmojis(count = emojiCodes.length) {
+  emojiCards.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const emoji = String.fromCodePoint(emojiCodes[i]);
+    const emojiCard = document.createElement("div");
+    emojiCard.textContent = emoji;
+    emojiCards.appendChild(emojiCard);
+  }
+}
