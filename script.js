@@ -16,4 +16,4 @@ function showEmojis(count = emojiCodes.length) {
   }
 }
 
-showEmojis(4); // Show 4 emojis by default
+showEmojis(4); // Display the first four emojis.

@@ -14,3 +14,9 @@
   width: 440px;
   border-radius: 20px;
 }
+
+body {
+  margin-left: 20px;
+  font-size: 24px;
+  text-align: center;
+}
