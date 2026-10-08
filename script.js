@@ -4,3 +4,11 @@ const emojiCodes = [
 ];
 
 const container = document.getElementById("container");
+const emojiCards = document.getElementById("emoji-cards");
+
+emojiCodes.forEach((code) => {
+  const emoji = String.fromCodePoint(code);
+  const emojiCard = document.createElement("div");
+  emojiCard.textContent = emoji;
+  emojiCards.appendChild(emojiCard);
+});
