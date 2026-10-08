@@ -8,8 +8,9 @@ const emojiCodes = [
 // FIND the gallery container
 const container = document.getElementById("container");
 const emojiCards = document.getElementById("emoji-cards");
-const card = document.createElement("div");
-card.classList.add("card");
+
+emojiCards.tabIndex = 0;
+emojiCards.textContent = "Emoji gallery";
 
 // DEFINE showEmojis(count)
 // DEFAULT count to the array's length
@@ -29,7 +30,7 @@ showEmojis();
 // CLEAR the existing gallery
 
 const clearGallery = () => {
-  emojiCards.innerHTML += "";
+  emojiCards.innerHTML = "";
 };
 
 //  REPEAT count times, starting at array index zero
