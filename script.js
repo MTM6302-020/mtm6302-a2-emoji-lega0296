@@ -28,7 +28,12 @@ showEmojis();
 
 // CLEAR the existing gallery
 
+const clearGallery = () => {
+  emojiCards.innerHTML += "";
+};
+
 //  REPEAT count times, starting at array index zero
+
 // READ the emoji code at the current index
 // CREATE a card containing the emoji and its code
 // ADD the card to the gallery
