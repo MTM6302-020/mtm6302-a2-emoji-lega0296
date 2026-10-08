@@ -15,3 +15,5 @@ function showEmojis(count = emojiCodes.length) {
     emojiCards.appendChild(emojiCard);
   }
 }
+
+showEmojis(4); // Show 4 emojis by default
