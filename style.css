@@ -9,7 +9,7 @@
 }
 
 #emoji-cards {
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 4px 8px 0 rgb(54 50 164 / 20%);

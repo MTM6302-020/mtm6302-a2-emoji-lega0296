@@ -7,13 +7,28 @@ const emojiCodes = [
 // FIND the gallery container
 const gallery = document.getElementById("container");
 // DEFINE showEmojis(count)
-//     DEFAULT count to the array's length
+function showEmojis(count = emojiCodes.length) {
+  //     DEFAULT count to the array's length
+  //     CLEAR the existing gallery
+  gallery.innerHTML = "";
 
-//     CLEAR the existing gallery
+  //     REPEAT count times, starting at array index zero
+  for (let i = 0; i < emojiCodes.length && i < count; i++) {
+    const code = emojiCodes[i];
 
-//     REPEAT count times, starting at array index zero
-//         READ the emoji code at the current index
-//         CREATE a card containing the emoji and its code
-//         ADD the card to the gallery
+    const card = document.createElement("div");
+    card.classList.add("card");
 
+    const emoji = document.createElement("span");
+    emoji.textContent = String.fromCodePoint(code);
+
+    const codeText = document.createElement("p");
+    codeText.textContent = `Code: ${code}`;
+
+    card.appendChild(emoji);
+    card.appendChild(codeText);
+    gallery.appendChild(card);
+  }
+}
 // CALL showEmojis() to display all emojis
+showEmojis();
