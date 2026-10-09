@@ -16,6 +16,8 @@ function showEmojis(count = emojiCodes.length) {
   for (let i = 0; i < emojiCodes.length && i < count; i++) {
     const code = emojiCodes[i];
 
+    let count = 0;
+
     const card = document.createElement("div");
     card.classList.add("card");
 
