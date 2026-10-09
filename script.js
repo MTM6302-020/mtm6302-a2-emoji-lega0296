@@ -37,7 +37,7 @@ emojiCards.tabIndex = 0;
 
 // READ the emoji code at the current index
 
-showEmojis(emojiCodes.length);
+showEmojis(count);
 // CREATE a card containing the emoji and its code
 // ADD the card to the gallery
 
