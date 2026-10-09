@@ -28,6 +28,7 @@ function showEmojis(count = emojiCodes.length) {
     card.appendChild(emoji);
     card.appendChild(codeText);
     gallery.appendChild(card);
+    card.tabIndex = 0; // Make the card focusable
   }
 }
 // CALL showEmojis() to display all emojis
