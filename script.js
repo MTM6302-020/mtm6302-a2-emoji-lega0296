@@ -11,7 +11,7 @@ const emojiCards = document.getElementById("emoji-cards");
 
 // DEFINE showEmojis(count)
 
-showEmojis((count = 14));
+showEmojis((count = 15));
 
 // DEFAULT count to the array's length
 
