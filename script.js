@@ -30,6 +30,9 @@ const clearGallery = () => {
 emojiCards.tabIndex = 0;
 
 // READ the emoji code at the current index
+emojiCodes.forEach((code) => {
+  addEmojiCard(code);
+});
 
 // CREATE a card containing the emoji and its code
 
