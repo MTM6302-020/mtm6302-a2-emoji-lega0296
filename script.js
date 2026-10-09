@@ -19,7 +19,6 @@ function showEmojis(count = emojiCodes.length) {
     const emojiCard = document.createElement("div");
     emojiCard.textContent = emoji;
     emojiCards.appendChild(emojiCard);
-    showEmojis(count);
   }
 }
 
@@ -35,7 +34,6 @@ emojiCards.tabIndex = 0;
 // READ the emoji code at the current index
 
 // CREATE a card containing the emoji and its code
-emojiCards.innerHTML = `<div>${String.fromCodePoint(emojiCodes[i])} - ${emojiCodes[i]}</div>`;
 
 // ADD the card to the gallery
 
