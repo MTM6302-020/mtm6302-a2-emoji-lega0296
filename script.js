@@ -2,7 +2,7 @@
 
 const emojiCodes = [
   128512, 128513, 128514, 128515, 128516, 128517, 128518, 128519, 128520,
-  128521, 128522, 128523,
+  128521, 128522, 128523, 128151,
 ];
 
 // FIND the gallery container
@@ -10,6 +10,7 @@ const container = document.getElementById("container");
 const emojiCards = document.getElementById("emoji-cards");
 
 // DEFINE showEmojis(count)
+
 // DEFAULT count to the array's length
 
 function showEmojis(count = emojiCodes.length) {
