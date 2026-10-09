@@ -9,10 +9,7 @@ const emojiCodes = [
 const container = document.getElementById("container");
 const emojiCards = document.getElementById("emoji-cards");
 
-emojiCards.textContent = "Emoji gallery";
-
 // DEFINE showEmojis(count)
-showEmojis(count);
 // DEFAULT count to the array's length
 
 function showEmojis(count = emojiCodes.length) {
@@ -22,6 +19,7 @@ function showEmojis(count = emojiCodes.length) {
     const emojiCard = document.createElement("div");
     emojiCard.textContent = emoji;
     emojiCards.appendChild(emojiCard);
+    showEmojis(count);
   }
 }
 
