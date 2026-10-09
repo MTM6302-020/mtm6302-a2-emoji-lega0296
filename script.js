@@ -16,10 +16,7 @@ const emojiCards = document.getElementById("emoji-cards");
 function showEmojis(count = emojiCodes.length) {
   emojiCards.innerHTML = "";
   for (let i = 0; i < count; i++) {
-    const emoji = String.fromCodePoint(emojiCodes[i]);
-    const emojiCard = document.createElement("div");
-    emojiCard.textContent = emoji;
-    emojiCards.appendChild(emojiCard);
+    addEmojiCard(emojiCodes[i]);
   }
 }
 
@@ -36,7 +33,19 @@ emojiCards.tabIndex = 0;
 
 // CREATE a card containing the emoji and its code
 
+function createEmojiCard(emojiCode) {
+  const emoji = String.fromCodePoint(emojiCode);
+  const emojiCard = document.createElement("div");
+  emojiCard.textContent = `${emoji} - ${emojiCode}`;
+  return emojiCard;
+}
+
 // ADD the card to the gallery
+
+function addEmojiCard(emojiCode) {
+  const emojiCard = createEmojiCard(emojiCode);
+  emojiCards.appendChild(emojiCard);
+}
 
 // CALL showEmojis() to display all emojis
 
