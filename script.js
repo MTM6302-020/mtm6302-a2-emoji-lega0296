@@ -6,6 +6,8 @@ const emojiCodes = [
 
 // FIND the gallery container
 const gallery = document.getElementById("container");
+const emojiCards = document.getElementById("emoji-cards");
+
 // DEFINE showEmojis(count)
 function showEmojis(count = emojiCodes.length) {
   //     DEFAULT count to the array's length
@@ -18,8 +20,8 @@ function showEmojis(count = emojiCodes.length) {
 
     let count = 0;
 
-    const card = document.createElement("div");
-    card.classList.add("card");
+    const emojiCard = document.createElement("div");
+    emojiCard.classList.add("card");
 
     const emoji = document.createElement("span");
     emoji.textContent = String.fromCodePoint(code);
@@ -27,10 +29,23 @@ function showEmojis(count = emojiCodes.length) {
     const codeText = document.createElement("p");
     codeText.textContent = `Code: ${code}`;
 
-    card.appendChild(emoji);
-    card.appendChild(codeText);
-    gallery.appendChild(card);
-    card.tabIndex = 0; // Make the card focusable
+    emojiCard.appendChild(emoji);
+    emojiCard.appendChild(codeText);
+    gallery.appendChild(emojiCard);
+
+    const countText = document.createElement("p");
+    emojiCard.appendChild(countText);
+
+    const cardData = {
+      text: emoji.textContent,
+      code: code,
+      count: count,
+    };
+    emojiCard.tabIndex = 0; // Make the card focusable
+
+    console.log(
+      `Emoji: ${cardData.text}, Code: ${cardData.code}, Count: ${cardData.count}`,
+    );
   }
 }
 // CALL showEmojis() to display all emojis
