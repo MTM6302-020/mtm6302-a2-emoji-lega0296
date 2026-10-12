@@ -6,7 +6,6 @@ const emojiCodes = [
 
 // FIND the gallery container
 const gallery = document.getElementById("container");
-const emojiCards = document.getElementById("emoji-cards");
 
 // DEFINE showEmojis(count)
 function showEmojis(count = emojiCodes.length) {
@@ -23,6 +22,7 @@ function showEmojis(count = emojiCodes.length) {
     emojiCard.tabIndex = 0; // Make the card focusable
 
     const emoji = document.createElement("span");
+    emoji.classList.add("emoji");
     emoji.textContent = String.fromCodePoint(code);
 
     const codeText = document.createElement("p");
@@ -33,6 +33,7 @@ function showEmojis(count = emojiCodes.length) {
     gallery.appendChild(emojiCard);
 
     const countText = document.createElement("p");
+    countText.textContent = `Count: ${count}`;
     emojiCard.appendChild(countText);
 
     const cardData = {
