@@ -21,7 +21,8 @@ function showEmojis(count = emojiCodes.length) {
     let count = 0;
 
     const emojiCard = document.createElement("div");
-    emojiCard.classList.add("card");
+    emojiCard.classList.add("emoji-card");
+    emojiCard.tabIndex = 0; // Make the card focusable
 
     const emoji = document.createElement("span");
     emoji.textContent = String.fromCodePoint(code);

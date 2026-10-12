@@ -11,10 +11,9 @@
 }
 
 #emoji-cards {
-  padding: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
+  display: block;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 body {
